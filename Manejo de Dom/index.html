@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica</title>
+</head>
+<body>
+    <nav>
+        <li><a href="#"></a>Inicio</li>
+        <li><a href="practica_2.html">Practica 2</a></li>
+        <li><a href="practica3.html">Practica 3</a></li>
+        <li><a href="practica4.html">Practica 3</a></li>
+        
+    </nav>
+    <h1 id="titulo">Titulo</h1>
+
+        <div id="subtitulo"></div>
+
+        <p>1.Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus odio quod non, aliquid voluptatum quisquam atque corrupti ullam asperiores labore, aperiam similique consectetur porro nesciunt dicta sunt? Possimus, deleniti necessitatibus!</p>
+
+        <p id="segundo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quibusdam provident eos distinctio, numquam facere tempore minus. Autem est ad delectus maxime possimus quasi temporibus, neque molestias iste incidunt. Nulla.</p>
+        
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore corrupti autem maxime, expedita quaerat laudantium deserunt est accusamus earum sequi odit voluptates consequuntur reprehenderit assumenda sunt ratione officia eveniet rerum?</p>
+    
+    <script>
+        //CREAR UN NODO CON JAVASCRIPT (ELEMENTO DEL HTML)
+    
+        var elementoP = document.getElementsByTagName("p");
+        var segundoParrafo = document.getElementById("segundo");
+       
+       //PASOS PARA HACER ESTO
+       //1.CREAR EL ELEMENTO
+       var elemento = document.createElement("h2");
+       
+       //2.CREAR EL NODO DE TEXTO
+       var contenido = document.createTextNode("Titulo N°2");
+       
+       //3.AÑADIR EL NODO DE TEXTO AL ELEMENTO
+       elemento.appendChild(contenido);
+       
+       //4.AGREGAR EL ATRIBUTO AL ELEMENTO (Css)
+       elemento.setAttribute("align","center");
+       
+       //5.AGREGAR EL ELEMENTO AL DOCUMENTO
+       document.getElementById("subtitulo").appendChild(elemento);
+       
+       //appedChild(Incrusta el contenido dentro el elemento)
+       
+       //CREAMOS UN H2 FUERA DEL HTML
+       </script>
+</body>
+</html>

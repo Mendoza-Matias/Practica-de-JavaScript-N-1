@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 2</title>
+</head>
+<body>
+    <ol id="lista">
+
+        <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio cumque labore culpa provident modi enim fugiat assumenda obcaecati recusandae quae, tempora nostrum exercitationem suscipit ipsa quas similique eveniet alias. Earum?</li>
+
+        <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti, vitae facere ipsam magni itaque quia magnam obcaecati adipisci earum porro ipsum at nobis quis iste perspiciatis odio est hic. Ipsa?</li>
+    </ol>
+    <script>
+        //POSICIONAR UN NODO , ELIMINAR UN NODO
+
+    var elemento = document.createElement("li");
+    var contenido = document.createTextNode("Nuevo texto"); 
+
+    //var padre = document.getElementById("lista")
+    //(ACCEDER AL ELEMENTO PADRE CON EL ID , UNA FORMA)
+
+    var padre = document.getElementsByTagName("li")[0].parentNode;
+    var primerElemento = document.getElementsByTagName("li")[0];
+    //TRAER TODOS LOS ELEMENTOS COMO UN ARREGLO
+    //parentNode (QUEREMEOS QUE NOS DEVUELTA CUAL ES EL ELEMENTO PADRE)
+
+    //DECLARAR UN VARIABLE
+
+    elemento.appendChild(contenido);//INSERTAR EL TEXTO DENTRO DE OTRO
+
+    //1.TENER EL ELEMENTO QUE QUIERO AGREGAR
+    //padre.appendChild(contenido);
+
+    //2.DESPUES DONDE LO QUIERO AGREGAR
+
+    //padre.insertBefore(elemento,);
+    padre.insertBefore(elemento,primerElemento);
+
+
+    //document.body.appendChild("elemento")
+    </script>
+</body>
+</html>

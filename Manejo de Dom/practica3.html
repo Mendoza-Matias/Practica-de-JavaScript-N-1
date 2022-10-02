@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica_3</title>
+</head>
+<body>
+    <ol id="lista">
+
+        <li id="primerElemento">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam aut non at enim cumque fuga excepturi tenetur optio beatae suscipit autem esse vitae magni laborum, dolorem aliquid eius incidunt culpa?</li>
+        
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia eligendi in pariatur? Cum amet saepe, aliquam excepturi, neque error aspernatur sed voluptate molestiae quasi cumque ullam. Aut voluptatem pariatur natus!</li>
+    </ol>
+    <script>
+        //REMPLAZAR NODOS DEL DOM Y ELIMINAR NODOS
+
+    //var primerElemento = document.getElementById("primerElemento");
+
+    //primerElemento.innerHTML = "<strong>NUEVA LINEA DE TEXTO</strong><i class=\"foo\">Mendoza Matias</li>"
+
+    //primerElemento.innerHTML="Nuevo Texto" AÑADIR ETIQUETAS EJECUTABLES POR EL HTML;
+
+    //primerElemento.textContent = "Nuevo Contenido de texto";
+
+    //___________________________________________
+
+    var elemento = document.createElement("li");
+    var contenido = document.createTextNode("MAS NUEVO TEXTO");
+
+    elemento.appendChild(contenido);
+
+    var padre = document.getElementsByTagName("li")[0].parentNode;
+
+    var referencia = document.getElementsByTagName("li")[0];
+
+    //padre.replaceChild(elemento,referencia);//REMPLAZO UN ELEMENTO POR OTRO Y LO ELIMINO
+
+    //getElementsByTagName (NO ES RECOMENDABLE CON MUCHOS ELEMENTOS)
+    //______________ELIMINAR UN ELEMENTO
+
+    padre.removeChild(referencia);
+    </script>
+</body>
+</html>

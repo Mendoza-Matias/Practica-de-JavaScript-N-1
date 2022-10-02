@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica N°4</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background: blue;
+            display: inline-block;
+            margin-right: 10px;
+            border: 1px solid black;
+        }
+        .purpura{
+            background:purple;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <section id="contenedor">
+        <div class=""></div>
+        <div class=""></div>
+    </section>
+   
+    <script>
+        //APLICAR CSS CON JS
+
+    var elemento = document.createElement("div");
+
+    var padre =document.getElementById("contenedor");
+
+    var referencia = document.getElementsByTagName("div")[0];//ACCESO AL PRIMER ELEMENTO DEL DOM
+
+    elemento.setAttribute("class","purpura");//AÑADIR UN ESTILO A UN ELEMENTO(UN ATRIBUTO)
+
+    document.body.appendChild(elemento);
+
+    padre.insertBefore(elemento,referencia);//POSICIONAR EL NUEVO ELEMENTO PRIMERO
+
+    //elemento.id ="Nuevo id"
+    //Cambiar nombre de id
+    //elemento.className ="Nueva clase"
+    //cambiar nombre de la class
+    </script>
+</body>
+</html>
