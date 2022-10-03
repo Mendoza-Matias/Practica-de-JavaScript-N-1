@@ -20,35 +20,27 @@ botonDerecho.addEventListener("click",function(){
 });
 
 botonIzquierdo.addEventListener("click",function(){
-    colores.forEach((color,i)=>
-    {console.log(color,i)
-    if(caja.classList.contains(color)){
-        caja.classList.remove(color)
-        switch(i){
-            case 0:
-                caja.classList.add(colores[2])
-            break;
-            case i: 
-            caja.classList.add(colores[i-1])
-            break;
-    }
-    }})
-    
-})
+    cambiar(caja, recorrer);
+}   )
 
-/*function cambiarColor(element,x){
-    if(element.classList.contains(colores[x])){
-        element.classList.remove(colores[x])
-        if(typeof colores[x + 1] != undefined){
-            element.classList.add(colores[x + 1]);
-
-        }else{
-            element.classList.add(colores[0]);
+function recorrer(element,array){
+    for(i in array){
+        if(element.classList.contains(array[i])){
+            element.classList.remove(colores[i]);
+            return i
         }
     }
-}*/
-
-
-
-
-
+}
+function cambiar(element, callback){
+    let i = callback(element, colores);
+    if (i == 0){
+        element.classList.add(colores[2])
+    } 
+    else if (i <= 2) {
+        element.classList.add(colores[i - 1])
+    } 
+    else{
+        cual = window.prompt('elija un color ?: \n1)rojo \n2)verde \n3)azul ')
+        element.classList.add(colores[cual - 1])
+    }
+}
