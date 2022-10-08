@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica</title>
+</head>
+<body>
+
+<script>
+//Practica N°1
+//Escribir un programa que valide si una nota está entre 0 y 10, sino está entre 0 y 10 la nota 
+//se pedirá de nuevo hasta que la nota sea correcta.
+
+let nota = prompt("Ingrese su nota");
+
+if(nota > 0 && nota <= 10){ //primer condición , que la nota este entre 0 y 10
+    console.log("esta aprobada y es "+ nota) 
+};
+while(nota > 10 ||nota < 0){//Si no se cumple la primer condición se le pedira al usuario con el bucle while que ingrese un valor nuevo , si el que ingreso es mayor a 10 o negativo. Esto se repetira hasta que el usuario ingrese el valor correcto
+   nota = prompt("ingrese un nuevo valor")
+
+}
+
+
+
+</script>
+        
+</body>
+</html>
